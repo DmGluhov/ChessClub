@@ -1,0 +1,29 @@
+:root {
+  // Colors, Borders, Borders-radius, Shadows, Container, Container-padding, Font-family, Section-padding, Button-heights
+
+  --container-width: 1222px;
+  --container-padding: 20px;
+
+  --section-margin: 200px;
+  --section-margin-media: 120px; // Отступы между sections
+
+  --color-dark: #313131;
+  --color-light: #fff;
+  --color-red: #f54932;
+  --color-blue: #3057a2;
+  --color-btn: #1f1f1f;
+  --color-yellow: #fbce51;
+  --color-table: #d0d0d0;
+
+  --border-radius: 66px;
+  --border-radius-small: 60px;
+  --border-radius-large: 62px;
+
+  --shadow: 0 5px 0 0 var(--color-dark);
+
+  --font-family-base: "GolosText", sans-serif;
+  --font-family-secondary: "Merriweather", sans-serif;
+  --font-family-third: "Montserrat", sans-serif;
+
+  --transition-duration: 0.2s;
+}

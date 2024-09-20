@@ -1,0 +1,301 @@
+.stages {
+  margin-bottom: var(--section-margin);
+  overflow: hidden;
+  @include mediaL {
+    margin-bottom: var(--section-margin-media);
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 45px;
+    right: -51px;
+    z-index: 100;
+    transform: rotate(-15deg);
+    z-index: 500;
+
+    @include mediaXL {
+      font-size: 18px;
+      width: 317px;
+      height: 124px;
+      bottom: 35%;
+    }
+
+    @include mediaL {
+      top: -120px;
+      right: 0;
+    }
+
+    @include mediaM {
+      right: 50%;
+      top: -95px;
+      transform: translate(50%) rotate(-19deg);
+    }
+  }
+
+  &__header {
+    position: relative;
+    max-width: 806px;
+    margin-bottom: 64px;
+
+    @include mediaXL {
+      max-width: 620px;
+    }
+
+    @include mediaM {
+      margin-bottom: 148px;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    margin-bottom: 28px;
+    overflow: visible !important;
+  }
+
+  &__title {
+    @include mediaL {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0;
+    right: 196px;
+    max-width: 280px;
+
+    @include mediaXL {
+      right: 55px;
+      font-size: 18px;
+      bottom: 5px;
+    }
+
+    @include mediaL {
+      position: relative;
+      right: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      "slide-first slide-first slide-second"
+      "slide-third slide-third slide-second"
+      "slide-fourth slide-fifth slide-fifth";
+
+    @include mediaL {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "slide-first"
+        "slide-second"
+        "slide-third"
+        "slide-fourth"
+        "slide-fifth";
+    }
+
+    @include mediaM {
+      gap: 0px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    height: auto;
+    gap: 20px;
+
+    @include mediaM {
+      background: #d9d9d9;
+      position: relative;
+      padding: 62px 0 34px;
+      display: flex !important;
+      flex-direction: column;
+      gap: 28px;
+      align-items: stretch;
+      height: auto !important;
+    }
+
+    &:after,
+    &:before {
+      @include mediaM {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+      }
+    }
+
+    &::before {
+      @include mediaM {
+        background: url(../../img/stages/paper-effect.png);
+        opacity: 0.8;
+        z-index: 200;
+      }
+    }
+
+    &::after {
+      @include mediaM {
+        background: url(../../img/stages/grey-effect.png);
+        mix-blend-mode: color-burn;
+        z-index: 300;
+      }
+    }
+  }
+
+  &__block {
+    padding: 20px 20px 20px 72px;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    background: #d9d9d9;
+    min-height: 112px;
+
+    @include mediaM {
+      background: none;
+      min-height: 0;
+      padding: 0 24px 0 72px;
+      display: flex;
+    }
+
+    &:last-child {
+      p {
+        max-width: 446px;
+
+        @include mediaL {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: "";
+
+      @include mediaM {
+        display: none;
+      }
+    }
+
+    &::before {
+      background: url(../../img/stages/paper-effect.png);
+      opacity: 0.8;
+      z-index: 200;
+    }
+
+    &::after {
+      background: url(../../img/stages/grey-effect.png);
+      mix-blend-mode: color-burn;
+      z-index: 300;
+    }
+  }
+
+  &__block-text {
+    max-width: 302px;
+    z-index: 500;
+    position: relative;
+    @include mediaL {
+      max-width: 100%;
+    }
+
+    @include mediaM {
+      font-size: 18px;
+      flex: 1 0 auto;
+    }
+  }
+
+  &__block-number {
+    position: absolute;
+    font-weight: 600;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background: var(--color-light);
+    @include square(36px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+
+    @include mediaM {
+      top: 0;
+    }
+  }
+
+  &__buttons {
+    display: none;
+    @include mediaM {
+      display: flex;
+      position: relative;
+      max-width: 180px;
+      width: 100%;
+      height: 36px;
+      margin: 0 auto;
+    }
+
+    &-pagination {
+      bottom: 50% !important;
+      transform: translate(0, 40%) !important;
+
+      & .swiper-pagination-bullet-active {
+        background: var(--color-dark) !important;
+      }
+    }
+
+    &-next,
+    &-prev {
+      z-index: 100 !important;
+      width: 36px !important;
+      height: 36px !important;
+      background-color: var(--color-dark);
+      border-radius: 100%;
+      top: 0 !important;
+      margin-top: 0 !important;
+
+      @include hover {
+        background: var(--color-yellow);
+      }
+
+      &::after {
+        font-size: 17px !important;
+        color: var(--color-light);
+      }
+    }
+  }
+}
+
+.title {
+  max-width: 806px;
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.slide-first {
+  grid-area: slide-first;
+}
+.slide-second {
+  grid-area: slide-second;
+}
+.slide-third {
+  grid-area: slide-third;
+}
+.slide-fourth {
+  grid-area: slide-fourth;
+}
+.slide-fifth {
+  grid-area: slide-fifth;
+}

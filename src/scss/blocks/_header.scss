@@ -1,0 +1,28 @@
+.header {
+  padding: 26px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+
+  @include mediaL {
+    padding: 20px 0;
+  }
+
+  &_logo {
+    // position: relative;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.08;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include mediaM {
+      font-size: 14px;
+    }
+  }
+}

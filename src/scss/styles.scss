@@ -1,0 +1,6 @@
+/* Base */
+@import "./base/normalize", "./base/fonts", "./base/mixins", "./base/media", "./base/utils", "./base/global",
+  "./base/variables";
+
+/* Blocks */
+@import "./blocks/*.scss";

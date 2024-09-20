@@ -1,0 +1,164 @@
+.intro {
+  padding: 124px 0 130px;
+
+  position: relative;
+  overflow: hidden;
+  background: url(../../img/intro/intro_bg.png) no-repeat;
+  background-position: bottom -44px center;
+
+  background-color: #e9ded4;
+
+  @include mediaXL {
+    background-position: bottom -44px right -120px;
+    background-size: cover;
+  }
+
+  @include mediaM {
+    padding: 90px 0 290px;
+    background-size: 180%;
+    background-position: bottom -40px right -55px;
+  }
+
+  @include mediaS {
+    background-size: 220%;
+    background-position: bottom -30px right -75px;
+  }
+
+  @include mediaS {
+  }
+
+  &__effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    mix-blend-mode: color-burn;
+    z-index: 200;
+  }
+
+  &_content {
+    position: relative;
+    max-width: 542px;
+    z-index: 200;
+
+    @include mediaXL {
+      max-width: 480px;
+    }
+
+    @include mediaL {
+      max-width: 400px;
+    }
+
+    @include mediaM {
+      max-width: 335px;
+      margin: 0 auto;
+    }
+    @media (max-width: 360px) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: var(--font-family-secondary);
+    margin-bottom: 24px;
+    line-height: 1.1;
+    font-weight: 400;
+    @include fluid-text(60, 36);
+
+    & span {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include mediaM {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 360px) {
+      text-align: center;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include mediaL {
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+
+  &__button {
+    background: var(--color-btn);
+    color: var(--color-light);
+    max-width: 263px;
+    padding: 20px 49px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    border: 2px var(--color-btn) solid;
+
+    @include hover {
+      background: var(--color-yellow);
+      border-color: var(--color-yellow);
+      color: var(--color-dark);
+    }
+
+    @include mediaXL {
+      padding: 20px;
+    }
+
+    @include mediaL {
+      padding: 18px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__img-knight {
+    position: absolute;
+    bottom: 0;
+    right: 334px;
+    z-index: 100;
+  }
+
+  &__img-pawn {
+    position: absolute;
+    bottom: 2.86%;
+    right: 3.28%;
+    z-index: 100;
+  }
+}
+.button {
+  color: var(--color-btn);
+  background: transparent;
+
+  @include mediaXL {
+    border-color: var(--color-light);
+    background: var(--color-light);
+    opacity: 0.9;
+  }
+
+  @include hover {
+    background: var(--color-btn);
+    color: var(--color-light);
+    border-color: var(--color-btn);
+    opacity: 1;
+  }
+}

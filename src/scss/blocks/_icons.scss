@@ -1,0 +1,27 @@
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 62px;
+	height: 62px;
+}
+
+// .icon--heart {
+
+// 	fill: rgb(241, 68, 131);
+// 	transition: 0.2s linear;
+
+// 	&:hover {
+// 		fill: rgb(17, 193, 90);
+// 	}
+// }
+
+.icon--logo {
+	width: 92px;
+	height: 31px;
+	fill: #595653;
+
+	@include mediaM {
+		width: 80px;
+		height: 27px;
+	}
+}

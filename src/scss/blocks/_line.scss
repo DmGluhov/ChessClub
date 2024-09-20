@@ -1,0 +1,51 @@
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.line {
+  padding: 18px 0;
+  background: var(--color-red);
+  line-height: 1.1;
+  color: var(--color-light);
+  font-family: var(--font-family-secondary);
+  font-size: 22px;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  @include mediaM {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+
+.line__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: fit-content;
+  animation: ticker 20s linear infinite;
+  -webkit-transform-style: preserve-3d;
+}
+
+.line__item {
+  position: relative;
+  white-space: nowrap;
+  -webkit-backface-visibility: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: var(--color-light);
+  }
+}

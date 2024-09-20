@@ -1,0 +1,13 @@
+.footer {
+  background: #e9ded4;
+  padding: 40px 0 72px;
+
+  @include mediaM {
+    padding: 40px 0 60px;
+  }
+
+  &__info {
+    font-size: 16px;
+    opacity: 0.6;
+  }
+}
